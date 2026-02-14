@@ -1,0 +1,59 @@
+{
+  "name": "vocat-integration",
+  "displayName": "VoCAT IDE Integration",
+  "description": "Voice-activated terminal for VS Code, Cursor, and MCP",
+  "version": "1.0.0",
+  "publisher": "vocat",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": ["Other", "Programming Languages"],
+  "activationCommands": {
+    "onCommand:vocat.toggle": "vocat.toggle"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "vocat.toggle",
+        "title": "VoCAT: Toggle Voice"
+      },
+      {
+        "command": "vocat.runTests",
+        "title": "VoCAT: Run Tests"
+      },
+      {
+        "command": "vocat.commit",
+        "title": "VoCAT: Commit Changes"
+      },
+      {
+        "command": "vocat.push",
+        "title": "VoCAT: Push"
+      },
+      {
+        "command": "vocat.pull",
+        "title": "VoCAT: Pull"
+      }
+    ],
+    "configuration": {
+      "title": "VoCAT",
+      "properties": {
+        "vocat.voiceEnabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable voice commands"
+        },
+        "vocat.activationPhrase": {
+          "type": "string",
+          "default": "hey vo cat",
+          "description": "Voice activation phrase"
+        },
+        "vocat.theme": {
+          "type": "string",
+          "default": "jarvis",
+          "enum": ["jarvis", "peon", "custom"],
+          "description": "Voice theme"
+        }
+      }
+    }
+  }
+}

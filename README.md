@@ -1,67 +1,84 @@
-# VoCAT-Integration
+# vocat-integration
 
-VoCAT integration for VS Code, Cursor, and other editors. MCP server implementation.
+## Detailed Description
 
-## Features
+vocat-integration is maintained as an industry-grade software project with production-ready engineering practices.  
+This repository includes documented setup, quality gates, operational guidance, and governance standards so contributors can safely build, test, and ship changes with confidence.
 
-- VS Code extension
-- Cursor IDE integration
-- MCP (Model Context Protocol) server
-- Voice commands in editor
-- Inline terminal output
-- Git integration in sidebar
+## Problem Statement
 
-## Installation
+Describe the user or business problem this project solves, the target users, and expected outcomes.
 
-### VS Code
-1. Search "VoCAT" in Extensions marketplace
-2. Install and reload
+## Solution Overview
 
-### Cursor IDE
-1. Search "VoCAT" in Extensions
-2. Install and restart
+Summarize the architecture, core modules, and runtime behavior at a high level.
 
-### MCP Server
+## Key Features
+
+- Clear project scope and intended use.
+- Reproducible local development workflow.
+- Test coverage and CI quality gates.
+- Security and contribution policies.
+- Deployment-ready repository structure.
+
+## Repository Structure
+
+```text
+.
+|-- src/                  # Core implementation
+|-- tests/                # Automated test suites
+|-- docs/                 # Design notes and operational docs
+|-- .github/workflows/    # CI pipelines
+|-- README.md
+|-- LICENSE
+|-- CONTRIBUTING.md
+|-- SECURITY.md
+|-- CODE_OF_CONDUCT.md
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Git
+- Project runtime/toolchain for this repo
+
+### Local Setup
+
 ```bash
-npm install -g vocat-mcp
-vocat-mcp-server
+npm ci
+npm run lint
+npm test
+npm run build
 ```
 
 ## Usage
 
-Voice commands available:
-- "run tests" - Run test suite
-- "commit changes" - Commit current changes
-- "push" - Push to remote
-- "build project" - Run build
-- "open file [name]" - Open file
-- "go to line [number]" - Navigate to line
+Document primary commands, API routes, CLI examples, or UI workflows here.
 
-## Configuration
+## Quality Standards
 
-Add to settings.json:
-```json
-{
-  "vocat.voiceEnabled": true,
-  "vocat.activationPhrase": "hey vo cat",
-  "vocat.theme": "jarvis"
-}
-```
+- CI must pass before merge.
+- Changes require tests for critical behavior.
+- Security-sensitive changes should include risk notes.
+- Keep pull requests focused and reviewable.
 
-## MCP Protocol
+## Security
 
-Connect to VoCAT MCP server:
-```json
-{
-  "mcpServers": {
-    "vocat": {
-      "command": "npx",
-      "args": ["vocat-mcp"]
-    }
-  }
-}
-```
+See `SECURITY.md` for responsible disclosure and handling guidelines.
+
+## Contributing
+
+See `CONTRIBUTING.md` for branching, commit, and pull request expectations.
+
+## Roadmap
+
+Track upcoming milestones, technical debt, and planned feature work.
+
+## Support
+
+Open a GitHub issue for bugs, feature requests, or documentation gaps.
 
 ## License
 
-MIT
+This project is released under the MIT License.
